@@ -21,8 +21,8 @@ const modalPromise = modals.show(options); // will show your modal
 ```
 
 The `modals.show(options)` method always return a promise with additional properties:  
-**destroy**: function, will destroy and remove modal.
-**ready**: promise, will settle when modal became fully initialized
+**destroy**: function, will destroy and remove modal.  
+**ready**: promise, will settle when modal became fully initialized.  
 **modal**: object, modal itself.  
 returned promise always resolves into object: ``` { ok: bool, value: any } ```:
 example:
