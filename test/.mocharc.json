@@ -1,0 +1,7 @@
+{
+	"checkLeaks": true,
+	"file": "./test/mocha.setup.js",
+	"recursive": true,
+	"spec": "./test/unit/",
+	"ui": "bdd"
+}
