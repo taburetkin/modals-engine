@@ -1,5 +1,10 @@
 {
+  "name": "modals-engine",
+  "version": "1.0.1",
+  "description": "small abstract framework agnostic library for modals management",
+  "author": "dimtabu <dima.taburetkin@gmail.com>",
   "type": "module",
+  "main": "index.js",
   "devDependencies": {
     "chai": "^6.0.1",
     "chai-as-promised": "^8.0.2",
@@ -9,10 +14,6 @@
     "sinon": "^21.0.0",
     "sinon-chai": "^4.0.1"
   },
-  "name": "modals-engine",
-  "version": "1.0.0",
-  "description": "small abstract framework agnostic library for modals management",
-  "main": "index.js",
   "scripts": {
     "test": "mocha --config ./test/.mocharc.json",
     "test-w": "mocha -w --config ./test/.mocharc.json",
@@ -22,6 +23,5 @@
     "front-end",
     "modal"
   ],
-  "author": "dimtabu <dima.taburetkin@gmail.com>",
   "license": "ISC"
 }

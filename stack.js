@@ -16,7 +16,7 @@ export const stack = {
 			attach
 
 		} = options;
-		//console.log('[isExternalElement]', isExternalElement)
+
 		if (typeof attach !== 'function') {
 			throw new Error('[modals-engine]: attach function missing');
 		}
@@ -43,6 +43,7 @@ export const stack = {
 			attach			
 		}
 
+		let modalDestroy;
 		let modalPromise = new Promise(async (resolve, reject) => {
 
 			const resolver = resolveWith => {
@@ -56,6 +57,7 @@ export const stack = {
 			}
 			promise.then(resolver,rejecter);
 
+			modalDestroy = rejecter;
 
 			if (isExternalElement) {
 				
@@ -83,7 +85,7 @@ export const stack = {
 		});
 
 		modalPromise.modal = modal;
-		modalPromise.destroy = () => this.destroy(modal);
+		modalPromise.destroy = modalDestroy;
 		
 		this.register(modal);
 		modalPromise.ready = modal.ready;
